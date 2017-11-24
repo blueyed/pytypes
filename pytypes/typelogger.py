@@ -891,7 +891,6 @@ def typelogged_module(md):
             pytypes.typechecker._pending_modules[md.__name__].append(typelogged_module)
             # we already process the module now as far as possible for its internal use
             # todo: Issue warning here that not the whole module might be covered yet
-    assert(ismodule(md))
     if md.__name__ in _fully_typelogged_modules and \
             _fully_typelogged_modules[md.__name__] == len(md.__dict__):
         return md
